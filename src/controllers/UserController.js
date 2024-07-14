@@ -16,4 +16,11 @@
         response.end(JSON.stringify(sortedUsers));         
     },
 
+    getUserById(request, response) {
+        const {id} = request.params;
+        
+        response.writeHead(200, { 'Content-Type': 'application/json'});
+        response.end(JSON.stringify({ok:true}));     
+    }
+
  }
